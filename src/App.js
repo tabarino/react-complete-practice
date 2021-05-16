@@ -16,10 +16,13 @@ function App() {
   };
 
   return (
-    <div className="App">
+    // This <> is the same as <Fragment>.
+    // However, in some projects it won't work.
+    // In those projects only import React and use <Fragment>
+    <>
       <AddUser onAddUser={addUserHandler} />
       <UsersList users={usersList} />
-    </div>
+    </>
   );
 }
 
